@@ -3,7 +3,8 @@
 }
 
 body {
-  --slack-color: '#3f0f40';
+  /* css에서 변수 사용하기 */
+  --slack-color: #3f0f40;
   overflow: hidden;
 
   margin: 0;
