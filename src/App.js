@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Header from './components/Header';
 import SideBar from './components/SideBar';
+import Chat from './components/Chat';
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
           <AppBody>
             <SideBar />
             <Switch>
-              <Route path='/' exact></Route>
-              {/* Chat */}
+              <Route path='/' exact>
+                <Chat />
+              </Route>
             </Switch>
           </AppBody>
         </>
