@@ -1,4 +1,4 @@
-## [Project Deployment Link](https://clone-53764.web.app/)
+## [Project Deployment Link](https://slack-clone-5d115.web.app)
 
 (google firebase hosted)
 
