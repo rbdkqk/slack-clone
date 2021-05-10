@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { db } from '../firebase';
+import { auth, db } from '../firebase';
 import { useCollection } from 'react-firebase-hooks/firestore';
 
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
@@ -17,18 +17,21 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 
 import SideBarOption from './SideBarOption';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 export default function SideBar() {
+  const [user] = useAuthState(auth);
+
   const [channels, loading, error] = useCollection(db.collection('rooms'));
 
   return (
     <SideBarContainer>
       <SideBarHeader>
         <SideBarInfo>
-          <h2>PaPa Fam HQ</h2>
+          <h2>Slack-Clone</h2>
           <h3>
             <FiberManualRecordIcon />
-            Sonny Sangha
+            {user.displayName}
           </h3>
         </SideBarInfo>
         <CreateIcon />

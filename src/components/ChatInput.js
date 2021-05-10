@@ -1,11 +1,14 @@
 import { Button } from '@material-ui/core';
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import { db } from '../firebase';
+import { auth, db } from '../firebase';
 import firebase from 'firebase';
 import { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 export default function ChatInput({ chatRef, channelName, channelId }) {
+  const [user] = useAuthState(auth);
+
   // const inputRef = useRef(null);
   const [input, setInput] = useState('');
 
@@ -17,8 +20,8 @@ export default function ChatInput({ chatRef, channelName, channelId }) {
       // message: inputRef.current.value,
       message: input,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      user: 'Sonny Sangha',
-      userImage: '',
+      user: user.displayName,
+      userImage: user.photoURL,
     });
 
     chatRef.current.scrollIntoView({
