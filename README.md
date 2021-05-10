@@ -1,3 +1,29 @@
+## [Project Deployment Link](https://slack-clone-5d115.web.app)
+
+(google firebase hosted)
+
+- 로그인 버튼으로 `google` 회원가입 / 로그인 (입력창 없음)
+- 로그인 후, 좌측 상단 `Avatar Icon` 부분 클릭으로 로그아웃
+- 좌측 하단 `Add Channel` 버튼 클릭 후 새로운 채널 추가 (삭제/수정 불가)
+- 생성된 채널 선택 후, 하단의 입력창에서 새로운 메세지 입력 가능 (삭제/수정 불가)
+
+---
+
+## Project Youtube Video Link
+
+[🔴 Let's build SLACK 2.0 with REACT.JS! (REDUX, Styled components & Firebase Hooks)
+](https://www.youtube.com/watch?v=QiTq5WrWoJw&t=7s)  
+(`Sonny Sangha` on Youtube)
+
+---
+
+## 새로 사용해 본 것들
+
+- useRef (`Chat.js / ChatInput.js`)
+- [react-spinkit](https://www.npmjs.com/package/react-spinkit)
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
